@@ -1,0 +1,19 @@
+<div>
+    <h2>Welcome to Angular.</h2>
+    <p> This is a paragraph tag </p>
+    <p>
+      {{ 10 + 20 }}
+    </p>
+    <p>{{ title}}, {{location}} </p>
+    <p>{{x}} + {{y}} = {{ x+y }}</p>
+    <p>{{ getDate() }}</p>
+    <button type="button" (click)="btnClick()">Click Me</button>
+    <p>
+      <span [innerHTML]="x"></span>
+      + 
+      <span [innerHTML]="y"></span>
+      = 
+      <span [innerHTML]="x+y"></span>
+    </p>
+    
+  </div>

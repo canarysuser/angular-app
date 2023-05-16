@@ -1,0 +1,18 @@
+<div>
+    <div class="row">
+        <div class="col-12">
+            <h3 class="text-center bg-warning text-dark p-3">Product Management</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-7">
+            <app-product-list [products]="products" (selectEvent)="selectProduct($event)">
+            </app-product-list>
+        </div>
+        <div class="col-5">
+            <app-product-details [model]="model" [currentAction]="currentAction"
+                (saveEvent)="saveDetails($event)">
+            </app-product-details>
+        </div>
+    </div>
+</div>

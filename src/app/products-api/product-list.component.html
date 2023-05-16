@@ -1,0 +1,43 @@
+<div class="alert alert-info">
+    <!-- <div class="display-3">List of Products </div>
+    <a [routerLink]="['/productsapi', 'edit', '10']" class="btn btn-lg btn-outline-danger">
+        Edit Product 10
+    </a>
+    <a [routerLink]="['/productsapi', 'details', '50']" class="btn btn-lg btn-outline-danger">
+        View Product 50
+    </a>
+    <a [routerLink]="['/productsapi', 'delete', '75']" class="btn btn-lg btn-outline-danger">
+        Delete Product 75
+    </a>
+    <br/>
+    <a [routerLink]="['/productsapi']" class="btn btn-lg btn-outline-secondary">
+        Go to Products API Home 
+    </a> -->
+    <div class="card shadow m-auto mt-5">
+        <div class="card-header bg-primary bg-opacity-50 d-flex">
+            <h3 class="flex-grow-1">Product List</h3>
+            <a  class="btn btn-sm btn-dark" [routerLink]="['/productsapi', 'create']">
+                Create New
+            </a>
+            </div>
+        <div class="card-body">
+            <table class="table table-dark table-striped table-hover">
+                <thead><tr><th>Product Name</th><th>Unit Price</th><th></th></tr></thead>
+                <tbody>
+                    <tr *ngFor="let item of products">
+                        <td>{{item.productName}}</td>
+                        <td>{{item.unitPrice}}</td>
+                        <td>
+                            <a class="btn btn-sm btn-outline-primary"
+                                [routerLink]="['/productsapi', 'details', item.productId]">View</a>
+                            <a class="btn btn-sm btn-outline-warning"
+                                [routerLink]="['/productsapi', 'edit', item.productId]">Edit</a>
+                            <a class="btn btn-sm btn-outline-danger"
+                                [routerLink]="['/productsapi', 'delete', item.productId]">Remove</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
